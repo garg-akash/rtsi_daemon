@@ -7,5 +7,9 @@ set (CMAKE_CXX_STANDARD 11)
 find_package(cs_rtsi REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread program_options)
 
+include_directories(include)
+
 add_executable(rdaemon rtsi_daemon)
 target_link_libraries(rdaemon csrtsi Boost::thread) 
+
+add_executable(profinet profinet)

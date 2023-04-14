@@ -129,10 +129,28 @@ int main()
         joint.joint_5_vel = joint_temp[5];
 
         joint_temp = rtsi_receive.getActualJointCurrent();
+        joint.joint_0_current = joint_temp[0];
+        joint.joint_1_current = joint_temp[1];
+        joint.joint_2_current = joint_temp[2];
+        joint.joint_3_current = joint_temp[3];
+        joint.joint_4_current = joint_temp[4];
+        joint.joint_5_current = joint_temp[5];
 
         joint_temp = rtsi_receive.getJointTemperatures();
+        joint.joint_0_temp = joint_temp[0];
+        joint.joint_1_temp = joint_temp[1];
+        joint.joint_2_temp = joint_temp[2];
+        joint.joint_3_temp = joint_temp[3];
+        joint.joint_4_temp = joint_temp[4];
+        joint.joint_5_temp = joint_temp[5];
 
-        // joint_temp = rtsi_receive.getJointMode();
+        std::vector<int> temp = rtsi_receive.getJointMode();
+        joint.joint_0_mode = temp[0];
+        joint.joint_1_mode = temp[1];
+        joint.joint_2_mode = temp[2];
+        joint.joint_3_mode = temp[3];
+        joint.joint_4_mode = temp[4];
+        joint.joint_5_mode = temp[5];
 
         sleep(10);
         break;
