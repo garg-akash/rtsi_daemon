@@ -8,8 +8,11 @@ find_package(cs_rtsi REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread program_options)
 
 include_directories(include)
+# include_directories(include/thirdparty/osal)
+add_subdirectory(include/thirdparty/osal)
+add_subdirectory(include/thirdparty/p-net)
 
 add_executable(rdaemon rtsi_daemon)
 target_link_libraries(rdaemon csrtsi Boost::thread) 
 
-add_executable(profinet profinet)
+add_executable(rtsi_profinet rtsi_profinet)

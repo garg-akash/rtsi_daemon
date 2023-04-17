@@ -1,0 +1,6 @@
+[submodule "include/thirdparty/p-net"]
+	path = include/thirdparty/p-net
+	url = https://github.com/rtlabs-com/p-net
+[submodule "include/thirdparty/osal"]
+	path = include/thirdparty/osal
+	url = https://github.com/rtlabs-com/osal
