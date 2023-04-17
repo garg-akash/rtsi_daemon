@@ -9,6 +9,8 @@
 #include <cs_rtsi/rtsi.h>
 #include <cs_rtsi/rtsi_receive_interface.h>
 
+#include "rtsi_pnet/eli_profinet.h"
+
 struct module_joints_t {
     float joint_0_pos;
     float joint_1_pos;
@@ -97,7 +99,7 @@ static void my_daemon()
 int main()
 {
     my_daemon();
-
+    eli_pnet_init();
     const std::string hostip = "192.168.133.130";
     double frequency = 250;
     std::vector<std::string> variables;
