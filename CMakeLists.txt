@@ -15,6 +15,10 @@ include_directories(include)
 include_directories(include/thirdparty)
 # add_subdirectory(include/thirdparty/osal)
 # add_subdirectory(include/thirdparty/p-net)
+
+option(BUILD_SHARED_LIBS "Build libraries as shared as opposed to static" ON)
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpic")
+
 add_subdirectory(src)
 
 add_executable(rdaemon rtsi_daemon)
