@@ -4,7 +4,7 @@
 
 #include "eli_common/eli_thread.h"
 #include "eli_common/eli_sys_utils.h"
-// #include "eli_log/eli_log_define.h"
+#include "eli_log/eli_log_define.h"
 
 #include "osal/osal.h"
 #include "p-net/pnet.h"
@@ -122,8 +122,8 @@ static int pnet_station_init()
   if(!Station_GetIsInit())
   {
     if(Station_Init(s_pnet.eth_name, s_pnet.station_name))
-      std::cout << "OK";
-      // INFO_LOG("Profinet init successful, eth : %s", s_pnet.eth_name);
+      // std::cout << "OK";
+      INFO_LOG("Profinet init successful, eth : %s", s_pnet.eth_name);
     else
     {
       // TODO : ERROR_LOG
